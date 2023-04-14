@@ -15,7 +15,6 @@ EXPOSE 80
 EXPOSE 8080
 
 # Start Nginx service
-CMD ["service", "nginx", "start"]
-
+CMD ["nginx", "-g", "daemon off;"]
 # Start Tomcat service
-CMD ["service", "tomcat7", "start"]
+CMD ["tomcat7", "-g", "daemon off;"]
